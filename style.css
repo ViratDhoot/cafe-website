@@ -386,3 +386,39 @@ nav a:hover {
     }
 }
 
+
+/* Mobile navigation button */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 2px solid currentColor;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Mobile screen layout */
+@media (max-width: 600px) {
+  .navbar {
+    position: relative;
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 0;
+  }
+
+  .navbar nav.is-open {
+    display: flex;
+  }
+}
